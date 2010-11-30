@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+require 'rubygems'
+
+#install in system thor
+Gem.find_files('fog/tools/*.thor').each do |f|
+  `thor -i --force --as #{File.basename(f)} #{f}`
+end
